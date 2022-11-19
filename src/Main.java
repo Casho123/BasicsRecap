@@ -3,7 +3,7 @@ public class Main {
 
         //Enter problem:
 
-        problem2(12);
+        problem3(40, "Regular", "Saturday");
     }
 
     public static void problem1(int age) {
@@ -34,6 +34,48 @@ public class Main {
         } else {
             System.out.println("Not divisible");
         }
+    }
+    public static void problem3(int number, String type, String day) {
+        double totalPrice = 0;
+        double pricePerOne = 0;
+        if (type.equals("Students")) {
+            if (day.equals("Friday")) {
+                pricePerOne = 8.45;
+            } else if (day.equals("Saturday")) {
+                pricePerOne = 9.80;
+            } else if (day.equals("Sunday")) {
+                pricePerOne = 10.46;
+            }
+            totalPrice = number * pricePerOne;
+            if (number >= 30) {
+                totalPrice  = totalPrice * 0.85;
+            }
+        } else if (type.equals("Business")) {
+            if (day.equals("Friday")) {
+                pricePerOne = 10.90;
+            } else if (day.equals("Saturday")) {
+                pricePerOne = 15.60;
+            } else if (day.equals("Sunday")) {
+                pricePerOne = 16;
+            }
+            totalPrice = number * pricePerOne;
+            if (number >= 100) {
+                totalPrice  = totalPrice - 10 * pricePerOne;
+            }
+        } else if(type.equals("Regular")) {
+            if (day.equals("Friday")) {
+                pricePerOne = 15;
+            } else if (day.equals("Saturday")) {
+                pricePerOne = 20;
+            } else if (day.equals("Sunday")) {
+                pricePerOne = 22.50;
+            }
+            totalPrice = number * pricePerOne;
+            if ( 10 <= number && number <= 20) {
+                totalPrice  = totalPrice * 0.95;
+            }
+        }
+        System.out.printf("Total price: %.2f", totalPrice);
 
     }
 }
