@@ -3,7 +3,7 @@ public class Main {
 
         //Enter problem:
 
-        problem3(40, "Regular", "Saturday");
+        problem4(50, 60);
     }
 
     public static void problem1(int age) {
@@ -76,6 +76,15 @@ public class Main {
             }
         }
         System.out.printf("Total price: %.2f", totalPrice);
+    }
+
+    public static void problem4(int start, int end) {
+        int sum = 0;
+        for (int i = start; i <= end ; i++) {
+            sum += i;
+
+        }
+        System.out.println("Sum: " + sum);
 
     }
 }
