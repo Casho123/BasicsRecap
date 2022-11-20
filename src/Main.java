@@ -81,10 +81,13 @@ public class Main {
     public static void problem4(int start, int end) {
         int sum = 0;
         for (int i = start; i <= end ; i++) {
+            System.out.print(i + " ");
             sum += i;
 
         }
+        System.out.println();
         System.out.println("Sum: " + sum);
 
     }
+
 }
